@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
+import service.Server;
 
 import java.io.IOException;
 import java.net.URL;
@@ -22,6 +23,7 @@ public class BeautyApp extends Application {
     static String title;
 
     public static void main(String[] args) {
+        Server.getInstance().start();
         launch(args);
     }
 
