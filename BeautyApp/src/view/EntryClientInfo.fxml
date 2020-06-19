@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="396.0" prefWidth="346.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EntryClientInfoController">
+   <children>
+      <TextField fx:id="name" layoutX="36.0" layoutY="212.0" />
+      <TextField fx:id="phone" layoutX="36.0" layoutY="294.0" />
+      <Label layoutX="12.0" layoutY="183.0" text="Ваше имя:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label layoutX="9.0" layoutY="261.0" text="Ваш номер телефона:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Button layoutX="243.0" layoutY="344.0" mnemonicParsing="false" onAction="#save" text="Записаться" />
+      <Button layoutX="149.0" layoutY="344.0" mnemonicParsing="false" onAction="#back" text="Назад" />
+      <Button layoutX="52.0" layoutY="344.0" mnemonicParsing="false" onAction="#cancel" text="Отмена" />
+      <Label layoutX="14.0" layoutY="14.0" text="Информация о записи:">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <TextArea fx:id="entryInfo" layoutX="40.0" layoutY="36.0" prefHeight="135.0" prefWidth="198.0" />
+      <TextField fx:id="nameText" editable="false" layoutX="75.0" layoutY="179.0" prefHeight="25.0" prefWidth="91.0" text="Укажите имя!" visible="false" />
+      <TextField fx:id="phoneText" editable="false" layoutX="140.0" layoutY="257.0" prefHeight="25.0" prefWidth="106.0" text="Укажите номер!" visible="false" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.MasterController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <TabPane layoutX="14.0" layoutY="49.0" prefHeight="317.0" prefWidth="493.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Записи">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="239.0" prefWidth="200.0">
+                            <children>
+                                <ListView fx:id="entryList" layoutX="4.0" layoutY="36.0" prefHeight="247.0" prefWidth="486.0" />
+                                <DatePicker fx:id="choiceDate" layoutX="305.0" layoutY="2.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Жалобы">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="239.0" prefWidth="200.0">
+                            <children>
+                                <TabPane layoutX="6.0" layoutY="6.0" prefHeight="275.0" prefWidth="484.0" tabClosingPolicy="UNAVAILABLE">
+                                    <tabs>
+                                        <Tab text="Открытые">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <ListView fx:id="openedComplaintsList" layoutX="7.0" layoutY="8.0" prefHeight="232.0" prefWidth="475.0" />
+                                                    </children></AnchorPane>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="Закрытые">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <ListView fx:id="closedComplaintsList" layoutX="7.0" layoutY="8.0" prefHeight="232.0" prefWidth="475.0" />
+                                                    </children></AnchorPane>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="Ожидают реакции администратора">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <ListView fx:id="waitingComplaintsList" layoutX="7.0" layoutY="8.0" prefHeight="232.0" prefWidth="475.0" />
+                                                    </children></AnchorPane>
+                                            </content>
+                                        </Tab>
+                                    </tabs>
+                                </TabPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Button layoutX="455.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" text="Выйти" />
+        <Button layoutX="357.0" layoutY="14.0" mnemonicParsing="false" onAction="#upd" text="Обновить" />
+    </children>
+</AnchorPane>
